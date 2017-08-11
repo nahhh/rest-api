@@ -1,0 +1,13 @@
+extends ../layout
+
+block content
+    h1= title
+    p Upload photo
+    form(method='post', enctype='multipart/form-data' action='')
+        div.form-group
+            p
+                input.form-control(type='text', name='imgName', placeholder='Name')
+            p
+                input.form-control(type='file', name='image')
+            p
+                button.btn.btn-primary(type='submit') Upload

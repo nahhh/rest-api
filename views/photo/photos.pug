@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+    h1= title
+        h4 Express photo application
+
+        a(href='/photo/upload') Upload file
+        
+        ul(class='list-inline')
+        each photo in photos
+            li(class='list-inline-item')
+                p #{photo.name}
+                a(href=photo.path, target='_blank')
+                    img(src=photo.path)
+        else
+            h1 There is no photo in this application
