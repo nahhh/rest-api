@@ -6,9 +6,9 @@ block content
 
         a(href='/photo/upload') Upload file
         
-        ul(class='list-inline')
+        ul(class='list-group')
         each photo in photos
-            li(class='list-inline-item')
+            li(class='list-group-item')
                 p #{photo.name}
                 a(href=photo.path, target='_blank')
                     img(src=photo.path)
